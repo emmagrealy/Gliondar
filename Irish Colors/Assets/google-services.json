@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "276620374735",
+    "firebase_url": "https://fir-game-c590f.firebaseio.com",
+    "project_id": "fir-game-c590f",
+    "storage_bucket": "fir-game-c590f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276620374735:android:1c8740a1ca2faaec1efdba",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.IrishColors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276620374735-i632p059o254n4e9760jrfi7q9v778qa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRsn1rWaKKvHm6fEk5xcce0nxHD2_LK0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276620374735-i632p059o254n4e9760jrfi7q9v778qa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

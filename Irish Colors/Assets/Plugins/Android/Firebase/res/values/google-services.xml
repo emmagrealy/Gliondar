@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://fir-game-c590f.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">276620374735</string>
+  <string name="google_storage_bucket" translatable="false">fir-game-c590f.appspot.com</string>
+  <string name="project_id" translatable="false">fir-game-c590f</string>
+  <string name="google_api_key" translatable="false">AIzaSyCRsn1rWaKKvHm6fEk5xcce0nxHD2_LK0c</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCRsn1rWaKKvHm6fEk5xcce0nxHD2_LK0c</string>
+  <string name="google_app_id" translatable="false">1:276620374735:android:1c8740a1ca2faaec1efdba</string>
+  <string name="default_web_client_id" translatable="false">276620374735-i632p059o254n4e9760jrfi7q9v778qa.apps.googleusercontent.com</string>
+</resources>
