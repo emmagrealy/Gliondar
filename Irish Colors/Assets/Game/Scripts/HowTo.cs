@@ -9,14 +9,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class CollisionSystem : MonoBehaviour {
-    public AudioClip[] Colors;
+public class HowTo : MonoBehaviour {
+    public AudioClip[] tests;
     public AudioSource AS;
     public GameObject FinishUI;
-    public Text ScoreText;
+    //public Text ScoreText;
     
-    private int Score;
-    private String[] ColorNames = {"Pink", "Purple", "Yellow", "Red", "Navy", "Green", "Blue", "Orange"};
+    //private int Score;
+    private String[] Test = {"Flag", "Knot"};
     private int Counter;
     private int SetUp;
     private Player player;
@@ -49,20 +49,20 @@ public class CollisionSystem : MonoBehaviour {
         //string jsonPlayer = JsonUtility.ToJson(player);
         //database.Child(FirebaseAuth.DefaultInstance.CurrentUser.UserId).SetRawJsonValueAsync(jsonPlayer);
         
-        Score = 0;
+        //Score = 0;
         Counter = 0;
         SetUp = 1000;
 
-        this.gameObject.tag = ColorNames[Counter];
-        AS.clip = Colors[Counter];
+        this.gameObject.tag = Test[Counter];
+        AS.clip = tests[Counter];
         AS.Play();
     }
 
     void FixedUpdate() {
         if (SetUp == 1000) return;
-        if (SetUp == 120 && Counter < 8) {
-            this.gameObject.tag = ColorNames[Counter];
-            AS.clip = Colors[Counter];
+        if (SetUp == 120 && Counter < 6) {
+            this.gameObject.tag = Test[Counter];
+            AS.clip = tests[Counter];
             AS.Play();
             
             SetUp = 1000;
@@ -74,15 +74,12 @@ public class CollisionSystem : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         AS.clip = other.gameObject.GetComponent<AudioSource>().clip;
         AS.Play();
-
-        if (this.gameObject.tag == other.gameObject.tag) ++Score;
-        ScoreText.text = Score.ToString();
-        player.score = Score;
         
         Destroy(other.gameObject);
         
         ++Counter;
-        if (Counter >= 8) {
+        
+        if (Counter >= 2) {
             FinishUI.SetActive(true);
             string jsonPlayer = JsonUtility.ToJson(player);
             database.Child(FirebaseAuth.DefaultInstance.CurrentUser.UserId).SetRawJsonValueAsync(jsonPlayer);
